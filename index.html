@@ -51,6 +51,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,240,232,
 .sec-sub{font-size:16px;color:var(--dim);max-width:500px;margin:0 auto;line-height:1.7}
 /* APP GRID */
 .app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.app-pair{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:768px){.app-pair{grid-template-columns:1fr}}
 .app-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 24px;transition:all .3s;cursor:pointer;text-decoration:none;color:inherit;position:relative;overflow:hidden}
 .app-card:hover{border-color:rgba(10,14,46,0.1);transform:translateY(-4px);box-shadow:0 12px 40px rgba(10,14,46,0.08)}
 .app-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--crystal),transparent);opacity:0;transition:opacity .3s}
@@ -157,20 +159,13 @@ footer{padding:32px 24px;text-align:center;background:#0a0e2e;border-top:1px sol
     <div class="sec-eye">Guided Experiences</div>
     <h2 class="sec-title">Our guided experiences</h2>
   </div>
-  <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+  <div class="app-pair" style="max-width:900px;margin:0 auto">
     <a href="/alignment.html" class="app-card" style="display:block;text-decoration:none;color:inherit">
       <div class="app-icon" style="background:rgba(77,184,255,0.08);color:#4db8ff">&#9670;</div>
       <div class="app-tag" style="color:#0969da">Guided Experience</div>
       <div class="app-name">Date of Birth Alignment</div>
       <div class="app-desc">A guided, interactive session personalized to your date of birth. Walk through a 7-step experience that decodes your identity, your patterns, your relationships, and your life cycles. Not a report you read. A session that realigns you with who you actually are.</div>
       <div class="app-transform" style="color:#0969da">"I stopped fighting myself and started working with my code."</div>
-    </a>
-    <a href="https://sedna.occultics.ai/" class="app-card" style="display:block;text-decoration:none;color:inherit">
-      <div class="app-icon" style="background:rgba(167,139,250,0.08);color:#a78bfa">&#9789;</div>
-      <div class="app-tag" style="color:#7c3aed">Guided Experience</div>
-      <div class="app-name">Sedna</div>
-      <div class="app-desc">An energetic charge release technique. Remove your emotional charges to manifest your desired reality sooner.</div>
-      <div class="app-transform" style="color:#7c3aed">"I let go of something I had been carrying for years."</div>
     </a>
     <a href="/compatibility.html" class="app-card" style="display:block;text-decoration:none;color:inherit">
       <div class="app-icon" style="background:rgba(26,42,255,0.08);color:#1a2aff">&#11041;</div>
