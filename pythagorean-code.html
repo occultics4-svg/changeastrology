@@ -6,10 +6,20 @@
 <title>Pythagorean Code Calculator</title>
 <meta name="description" content="Enter a date of birth to see your Pythagorean Code, its full description, and how the three numbers were worked out.">
 <link rel="canonical" href="https://changeastrology.com/pythagorean-code.html">
-<meta property="og:title" content="Pythagorean Code Calculator">
-<meta property="og:description" content="Enter a date of birth to see your Pythagorean Code, its full description, and how the three numbers were worked out.">
+<meta property="og:site_name" content="Change Astrology">
+<meta property="og:title" content="What's your Pythagorean Code?">
+<meta property="og:description" content="Enter your date of birth and get your 3-digit code with its full description. Free, no sign-up.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://changeastrology.com/pythagorean-code.html">
+<meta property="og:image" content="https://changeastrology.com/pythagorean-code-share.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="What's your Pythagorean Code? A free calculator from Change Astrology.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What's your Pythagorean Code?">
+<meta name="twitter:description" content="Enter your date of birth and get your 3-digit code with its full description. Free, no sign-up.">
+<meta name="twitter:image" content="https://changeastrology.com/pythagorean-code-share.png">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap">
 <style>
@@ -106,6 +116,14 @@ select:focus-visible, input:focus-visible, .btn:focus-visible, a:focus-visible {
 .desc p { margin: 0 0 15px; max-width: 38em; text-wrap: pretty; }
 .desc .guide-note { font-family: var(--sans); font-size: 13.5px; color: var(--muted); margin: 22px 0 0; }
 
+/* order */
+.order { margin-top: 30px; padding: 24px 22px 26px; background: var(--surface); border: 1px solid var(--line); }
+.order .tag { display: block; margin-bottom: 10px; }
+.order h2 { font-weight: 400; font-size: 26px; line-height: 1.15; margin: 0 0 10px; text-wrap: balance; }
+.order p { margin: 0 0 18px; max-width: 34em; text-wrap: pretty; }
+.order .btn { display: inline-flex; align-items: center; text-decoration: none; }
+@media (max-width: 640px) { .order .btn { display: flex; justify-content: center; white-space: normal; text-align: center; height: auto; min-height: 50px; padding: 14px 22px; line-height: 1.25; } }
+
 .worked { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--line); }
 .worked .tag { display: block; margin-bottom: 14px; }
 
@@ -169,6 +187,12 @@ footer .priv { font-family: var(--sans); font-size: 12.5px; color: var(--muted);
       <span class="tag" id="descTag"></span>
       <div id="descBody"></div>
       <p class="guide-note" id="guideNote"></p>
+    </div>
+    <div class="order" id="order" hidden>
+      <span class="tag">Go deeper</span>
+      <h2>Want the <em>whole story</em> behind your code?</h2>
+      <p>The Life Story Blueprint is a personal reading built from your name and birth details, delivered to your email within 3 days.</p>
+      <a class="btn" href="https://tally.so/r/dWLZAq" target="_blank" rel="noopener">Order your Life Story Blueprint</a>
     </div>
     <div class="worked">
       <span class="tag">How we worked it out</span>
@@ -370,6 +394,7 @@ footer .priv { font-family: var(--sans); font-size: 12.5px; color: var(--muted);
       $('guideNote').textContent = 'Pythagorean Code ' + r.code + ' is not in the Complete Guide yet. Your Life Path number is ' + r.lp.result + '.';
     }
     $('actions').hidden = isExample;
+    $('order').hidden = isExample;
     $('copyStatus').textContent = '';
     $('copyFallback').hidden = true;
     var res = $('result');
