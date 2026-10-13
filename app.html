@@ -261,6 +261,7 @@ details.how summary, details.fold summary { cursor: pointer; color: var(--accent
 .mail { margin-top: 44px; padding: 26px 22px; background: var(--surface); border: 1px solid var(--line); }
 .mail .tag { display: block; margin-bottom: 8px; }
 .mail p { max-width: 34em; }
+.mail iframe { display: block; width: 100%; border: 0; margin-top: 8px; }
 .mail-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .mail-row input { flex: 1 1 220px; width: auto; }
 .mail-msg { font-family: var(--sans); font-size: 14px; margin: 12px 0 0; min-height: 1.2em; }
@@ -340,24 +341,15 @@ footer a { color: var(--fg); }
     <div id="panel-match" class="panel" role="tabpanel" hidden></div>
   </section>
 
-  <!-- Email capture (static form so Netlify can detect it) -->
+  <!-- Email capture (Tally form embedded below) -->
   <section class="mail" id="mail">
     <span class="tag">Stay in the loop</span>
     <h2>Get new readings <em>by email</em></h2>
-    <p>New codes, daily energy and updates from Change Astrology. No spam, unsubscribe any time.</p>
-    <form name="app-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="mailForm">
-      <input type="hidden" name="form-name" value="app-signup">
-      <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-      <input type="hidden" name="code" id="mailCode">
-      <input type="hidden" name="sun" id="mailSun">
-      <div class="mail-row">
-        <label class="sr" for="mailEmail">Email address</label>
-        <input type="email" name="email" id="mailEmail" placeholder="you@example.com" required autocomplete="email">
-        <button type="submit" class="btn" id="mailBtn">Sign me up</button>
-      </div>
-      <p class="mail-msg" id="mailMsg" role="status"></p>
-    </form>
+    <iframe data-tally-src="https://tally.so/embed/vG7V7A?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="190" frameborder="0" marginheight="0" marginwidth="0" title="Email sign-up"></iframe>
+    <input type="hidden" id="mailCode"><input type="hidden" id="mailSun">
+    <p class="mail-msg">Form not showing? <a href="https://tally.so/r/vG7V7A" target="_blank" rel="noopener">Open the sign-up form</a>.</p>
   </section>
+  <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s)}</script>
 
   <footer>
     <span class="tagline">Welcome to your new reality</span>
@@ -1523,18 +1515,6 @@ var CODES = {"191":["These people are extremely analytical and detailed, often o
     renderMatch(state.profile);
   });
 
-  $('mailForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var msg = $('mailMsg'), btn = $('mailBtn');
-    function say(t, cls) { msg.textContent = t; msg.className = 'mail-msg ' + (cls || ''); }
-    if (location.protocol === 'file:') { say('Sign-up works once the page is live on the website.', 'bad'); return; }
-    btn.disabled = true; say('Saving...', '');
-    var body = new URLSearchParams(new FormData(this)).toString();
-    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
-      .then(function (r) { if (!r.ok) throw new Error('bad'); say('Thank you. You are on the list.', 'ok'); $('mailEmail').value = ''; })
-      .catch(function () { say('We could not save that right now. Please try again later.', 'bad'); })
-      .then(function () { btn.disabled = false; });
-  });
 
   /* ---------- start ---------- */
   fillDateSelects($('fDay'), $('fMonth'));
