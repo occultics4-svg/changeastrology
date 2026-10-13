@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Date of Birth Alignment — Occultics</title>
+<title>Your Date of Birth Alignment — Change Astrology</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 <style>
@@ -76,12 +76,12 @@ body{background:#0a0e2e;color:#fff;font-family:'Montserrat',sans-serif;min-heigh
 <div id="notfound">
   <h2>Profile not found</h2>
   <p>This link may be incorrect or expired.</p>
-  <a href="/">Return to Occultics</a>
+  <a href="/">Return to Change Astrology</a>
 </div>
 
 <div id="main">
   <div class="hdr">
-    <a href="/">OCCULTICS</a>
+    <a href="/">CHANGE ASTROLOGY</a>
     <div class="hdr-right">
       <button class="dl-btn" id="dl-btn" onclick="downloadPDF()">⬇ Download PDF</button>
       <span>Yours to keep</span>
@@ -122,7 +122,7 @@ body{background:#0a0e2e;color:#fff;font-family:'Montserrat',sans-serif;min-heigh
   <div class="sessions" id="sessions"></div>
   <div class="footer">
     <div class="footer-quote">"Your numbers have always known the way."</div>
-    <div class="footer-copy">© 2026 Occultics Publishing</div>
+    <div class="footer-copy">© 2026 Change Astrology</div>
   </div>
 </div>
 
@@ -247,7 +247,7 @@ function loadProfile() {
 
       document.getElementById('psub').textContent = 'Born ' + formatDate(p.date_of_birth) + ' · 11 Sessions';
       document.getElementById('eyebrow-text').textContent = 'The Compatibility Code';
-      document.title = (p.name || 'Your') + ' Compatibility Code — Occultics';
+      document.title = (p.name || 'Your') + ' Compatibility Code — Change Astrology';
     } else {
       document.getElementById('single-code').style.display = 'flex';
       document.getElementById('compat-display').style.display = 'none';
@@ -271,11 +271,11 @@ function loadProfile() {
       if (rt === 'life_code_map') {
         document.getElementById('psub').textContent = 'Born ' + formatDate(p.date_of_birth) + ' · Session 1 · 30 Minutes';
         document.getElementById('eyebrow-text').textContent = 'The Life Code Map';
-        document.title = (p.name || 'Your') + ' Life Code Map — Occultics';
+        document.title = (p.name || 'Your') + ' Life Code Map — Change Astrology';
       } else {
         document.getElementById('psub').textContent = 'Born ' + formatDate(p.date_of_birth) + ' · 7 Sessions';
         document.getElementById('eyebrow-text').textContent = 'Date of Birth Alignment';
-        document.title = (p.name || 'Your') + ' Date of Birth Alignment — Occultics';
+        document.title = (p.name || 'Your') + ' Date of Birth Alignment — Change Astrology';
       }
     }
 
@@ -517,12 +517,12 @@ function buildPDF(JsPDF, p, sections, btn, oldLabel) {
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(9);
     doc.setTextColor(GRAY[0], GRAY[1], GRAY[2]);
-    doc.text('© 2026 Occultics Publishing · occultics.ai', PW / 2, y, { align: 'center' });
+    doc.text('© 2026 Change Astrology · changeastrology.com', PW / 2, y, { align: 'center' });
     y += 6;
     doc.text('For informational and entertainment purposes only.', PW / 2, y, { align: 'center' });
 
     var safeName = (name + '').replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '') || 'profile';
-    doc.save('occultics-' + safeName + '.pdf');
+    doc.save('change-astrology-' + safeName + '.pdf');
 
     btn.disabled = false; btn.textContent = oldLabel;
   } catch (e) {

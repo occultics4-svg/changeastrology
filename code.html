@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculate Your Code — Occultics</title>
+<title>Calculate Your Code — Change Astrology</title>
 <meta name="description" content="Enter your birth date. See your Pythagorean code and pyramid code. Share it.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -101,7 +101,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--whit
   <div class="header">
     <a href="/" class="logo-wrap">
       <svg width="20" height="24" viewBox="0 0 80 100" fill="none"><polygon points="40,2 78,30 40,98 2,30" fill="#1a2aff" opacity="0.12"/><polygon points="40,2 78,30 40,50" fill="#1a2aff" opacity="0.55"/><polygon points="40,2 2,30 40,50" fill="#4db8ff" opacity="0.65"/><polygon points="2,30 40,50 40,98" fill="#1a2aff" opacity="0.35"/><polygon points="78,30 40,50 40,98" fill="#2a7fff" opacity="0.45"/></svg>
-      <div class="logo-name">OCCULTICS</div>
+      <div class="logo-name">CHANGE ASTROLOGY</div>
     </a>
     <div class="lang-switch" id="lang-switch"></div>
   </div>
@@ -148,8 +148,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--whit
   </div>
 
   <div class="footer">
-    <a href="/">occultics.ai</a> · <a href="/match/join.html">Join Match</a> · <a href="/match/compatibility.html">Compatibility</a>
-    <div class="footer-copy">&copy; 2026 Occultics Media</div>
+    <a href="/">changeastrology.com</a> · <a href="/match/join.html">Join Match</a> · <a href="/match/compatibility.html">Compatibility</a>
+    <div class="footer-copy">&copy; 2026 Change Astrology</div>
   </div>
 </div>
 
@@ -223,7 +223,7 @@ function buildCarousel(){
 
   // SLIDE 1 - Born on the Xth
   var s1='<div class="carousel-slide">';
-  s1+='<div class="s-logo">OCCULTICS MEDIA</div>';
+  s1+='<div class="s-logo">CHANGE ASTROLOGY MEDIA</div>';
   s1+='<div class="s-line"></div>';
   s1+='<div class="s-born-label">BORN ON THE</div>';
   s1+='<div class="s-born-num">'+d.ordinal+'</div>';
@@ -234,7 +234,7 @@ function buildCarousel(){
 
   // SLIDE 2 - Pythagorean Code
   var s2='<div class="carousel-slide">';
-  s2+='<div class="s-logo">OCCULTICS MEDIA</div>';
+  s2+='<div class="s-logo">CHANGE ASTROLOGY MEDIA</div>';
   s2+='<div class="s-line"></div>';
   s2+='<div class="s-eyebrow">YOUR PYTHAGOREAN CODE</div>';
   s2+='<div class="s-code" style="margin:12px 0">'+d.bio+' . '+d.gen+' . '+d.lp+'</div>';
@@ -249,7 +249,7 @@ function buildCarousel(){
 
   // SLIDE 3 - Pyramid
   var s3='<div class="carousel-slide">';
-  s3+='<div class="s-logo">OCCULTICS MEDIA</div>';
+  s3+='<div class="s-logo">CHANGE ASTROLOGY MEDIA</div>';
   s3+='<div class="s-line"></div>';
   s3+='<div class="s-eyebrow">YOUR NUMERICAL PYRAMID</div>';
   s3+='<div class="s-pyramid">';
@@ -273,14 +273,14 @@ function buildCarousel(){
 
   // SLIDE 4 - CTA
   var s4='<div class="carousel-slide">';
-  s4+='<div class="s-logo">OCCULTICS MEDIA</div>';
+  s4+='<div class="s-logo">CHANGE ASTROLOGY MEDIA</div>';
   s4+='<svg width="60" height="72" viewBox="0 0 80 100" fill="none" style="margin:20px 0;position:relative;z-index:1"><polygon points="40,2 78,30 40,98 2,30" fill="#1a2aff" opacity="0.12"/><polygon points="40,2 78,30 40,50" fill="#1a2aff" opacity="0.55"/><polygon points="40,2 2,30 40,50" fill="#4db8ff" opacity="0.65"/><polygon points="2,30 40,50 40,98" fill="#1a2aff" opacity="0.35"/><polygon points="78,30 40,50 40,98" fill="#2a7fff" opacity="0.45"/><polygon points="40,15 65,32 40,48" fill="#fff" opacity="0.18"/></svg>';
   s4+='<div class="s-line"></div>';
   s4+='<div class="s-question">What\'s<br><em>YOUR</em><br>code?</div>';
   s4+='<div class="s-line"></div>';
   s4+='<div class="s-sub">Your date of birth already knows who you are and who you\'re compatible with.</div>';
   s4+='<div style="margin:20px 0"><div class="s-sub" style="font-style:italic;color:rgba(255,255,255,0.35)">Self-awareness meets connection.</div></div>';
-  s4+='<div class="s-url">occultics.ai</div>';
+  s4+='<div class="s-url">changeastrology.com</div>';
   s4+='<a href="/match/compatibility.html" class="s-cta-btn" style="margin-top:16px">Check your compatibility</a>';
   s4+='</div>';
 
@@ -324,17 +324,17 @@ function showCalc(){
 
 // SHARE FUNCTIONS
 function shareIG(){
-  var text='Born on the '+userData.ordinal+'. My code: '+userData.code+'. Pyramid: '+userData.pyrCode+'. Calculate yours at occultics.ai/code.html';
+  var text='Born on the '+userData.ordinal+'. My code: '+userData.code+'. Pyramid: '+userData.pyrCode+'. Calculate yours at changeastrology.com/code.html';
   // Try native share (works on mobile - lets user pick Instagram, Stories, etc)
   if(navigator.share){
     navigator.share({
-      title:'My Occultics Code — '+userData.code,
+      title:'My Change Astrology Code — '+userData.code,
       text:text,
-      url:'https://occultics.ai/code.html'
+      url:'https://changeastrology.com/code.html'
     }).catch(function(){});
   } else {
     // Desktop fallback - copy text
-    var fullText=text+' https://occultics.ai/code.html';
+    var fullText=text+' https://changeastrology.com/code.html';
     navigator.clipboard.writeText(fullText).then(function(){
       alert('Copied! Open Instagram and paste in your Story.');
     }).catch(function(){
@@ -344,7 +344,7 @@ function shareIG(){
 }
 
 function shareWA(){
-  var text='Born on the '+userData.ordinal+'. My Pythagorean code is '+userData.code+'. My pyramid code is '+userData.pyrCode+'. What\'s YOUR code? Calculate it free: https://occultics.ai/code.html';
+  var text='Born on the '+userData.ordinal+'. My Pythagorean code is '+userData.code+'. My pyramid code is '+userData.pyrCode+'. What\'s YOUR code? Calculate it free: https://changeastrology.com/code.html';
   window.open('https://wa.me/?text='+encodeURIComponent(text));
 }
 
