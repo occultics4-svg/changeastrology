@@ -1,4 +1,4 @@
-// Occultics Match — Translations
+// Change Astrology Match — Translations
 // Include this script in all match pages: <script src="/match/i18n.js"></script>
 
 var MATCH_LANG = localStorage.getItem('occultics_match_lang') || navigator.language.substring(0,2) || 'en';
@@ -7,7 +7,7 @@ if (['en','es','ja'].indexOf(MATCH_LANG) === -1) MATCH_LANG = 'en';
 var T = {
   en: {
     // Common
-    back_to_occultics: '← Back to Occultics',
+    back_to_occultics: '← Back to Change Astrology',
     continue: 'Continue →',
     back: '← Back',
     save_changes: 'Save Changes',
@@ -70,7 +70,7 @@ var T = {
     feature_2: 'Full Pythagorean compatibility scores for every match',
     feature_3: 'Private messaging with your top matches',
     feature_4: 'Founding member pricing — locked in forever',
-    payment_label: 'Occultics Match — Founding Member',
+    payment_label: 'Change Astrology Match — Founding Member',
     payment_monthly: 'Monthly',
     payment_first100: 'First 100 members pricing',
     payment_locked: 'Locked in',
@@ -105,7 +105,7 @@ var T = {
     sign_in: 'Sign In →',
     forgot_password: 'Forgot password?',
     new_here: 'New here?',
-    join_match: '✦ Join Occultics Match',
+    join_match: '✦ Join Change Astrology Match',
     invalid_login: 'Invalid email or password. Please try again.',
     
     // Reset password
@@ -161,7 +161,7 @@ var T = {
     compat_code: 'Compatibility Code',
     synastry: 'Synastry',
     please_signin: 'Please sign in',
-    signin_link: 'Sign in to Occultics Match →',
+    signin_link: 'Sign in to Change Astrology Match →',
     
     // Messages
     conversations: 'Conversations',
@@ -202,11 +202,11 @@ var T = {
     
     // Footer
     footer_quote: '"Your numbers have always known the way."',
-    footer_copy: '© 2026 Occultics Publishing'
+    footer_copy: '© 2026 Change Astrology'
   },
   
   es: {
-    back_to_occultics: '← Volver a Occultics',
+    back_to_occultics: '← Volver a Change Astrology',
     continue: 'Continuar →',
     back: '← Atrás',
     save_changes: 'Guardar Cambios',
@@ -259,7 +259,7 @@ var T = {
     feature_2: 'Puntuaciones completas de compatibilidad pitagórica para cada match',
     feature_3: 'Mensajería privada con tus mejores matches',
     feature_4: 'Precio de miembro fundador — bloqueado para siempre',
-    payment_label: 'Occultics Match — Miembro Fundador',
+    payment_label: 'Change Astrology Match — Miembro Fundador',
     payment_monthly: 'Mensual',
     payment_first100: 'Precio para los primeros 100 miembros',
     payment_locked: 'Bloqueado',
@@ -288,7 +288,7 @@ var T = {
     sign_in: 'Iniciar Sesión →',
     forgot_password: '¿Olvidaste tu contraseña?',
     new_here: '¿Eres nuevo?',
-    join_match: '✦ Únete a Occultics Match',
+    join_match: '✦ Únete a Change Astrology Match',
     invalid_login: 'Correo o contraseña inválidos. Inténtalo de nuevo.',
     new_password: 'Nueva Contraseña',
     confirm_password: 'Confirmar Contraseña',
@@ -340,7 +340,7 @@ var T = {
     compat_code: 'Código de Compatibilidad',
     synastry: 'Sinastría',
     please_signin: 'Inicia sesión',
-    signin_link: 'Iniciar sesión en Occultics Match →',
+    signin_link: 'Iniciar sesión en Change Astrology Match →',
     conversations: 'Conversaciones',
     search_convos: 'Buscar conversaciones...',
     no_convos: 'Sin conversaciones aún',
@@ -373,11 +373,11 @@ var T = {
     creating_account: '⏳ Creando tu cuenta...',
     redirecting: 'Redirigiendo al pago...',
     footer_quote: '"Tus números siempre han conocido el camino."',
-    footer_copy: '© 2026 Occultics Publishing'
+    footer_copy: '© 2026 Change Astrology'
   },
   
   ja: {
-    back_to_occultics: '← Occulticsに戻る',
+    back_to_occultics: '← Change Astrologyに戻る',
     continue: '続ける →',
     back: '← 戻る',
     save_changes: '変更を保存',
@@ -430,7 +430,7 @@ var T = {
     feature_2: '全マッチのピタゴラス互換性スコア',
     feature_3: 'トップマッチとのプライベートメッセージ',
     feature_4: '創設メンバー価格 — 永久固定',
-    payment_label: 'Occultics Match — 創設メンバー',
+    payment_label: 'Change Astrology Match — 創設メンバー',
     payment_monthly: '月額',
     payment_first100: '最初の100名限定価格',
     payment_locked: '固定',
@@ -459,7 +459,7 @@ var T = {
     sign_in: 'ログイン →',
     forgot_password: 'パスワードを忘れましたか？',
     new_here: '初めてですか？',
-    join_match: '✦ Occultics Matchに参加',
+    join_match: '✦ Change Astrology Matchに参加',
     invalid_login: 'メールまたはパスワードが無効です。もう一度お試しください。',
     new_password: '新しいパスワード',
     confirm_password: 'パスワード確認',
@@ -511,7 +511,7 @@ var T = {
     compat_code: '互換性コード',
     synastry: 'シナストリー',
     please_signin: 'ログインしてください',
-    signin_link: 'Occultics Matchにログイン →',
+    signin_link: 'Change Astrology Matchにログイン →',
     conversations: '会話',
     search_convos: '会話を検索...',
     no_convos: 'まだ会話がありません',
@@ -544,7 +544,7 @@ var T = {
     creating_account: '⏳ アカウント作成中...',
     redirecting: 'チェックアウトにリダイレクト中...',
     footer_quote: '"あなたの数字は常に道を知っていました。"',
-    footer_copy: '© 2026 Occultics Publishing'
+    footer_copy: '© 2026 Change Astrology'
   }
 };
 

@@ -53,7 +53,7 @@ self.addEventListener('fetch', function(event) {
     }).catch(function() {
       // Offline — serve from cache
       return caches.match(event.request).then(function(cached) {
-        return cached || new Response('You are offline. Please reconnect to use Occultics Match.', {
+        return cached || new Response('You are offline. Please reconnect to use Change Astrology Match.', {
           status: 503,
           headers: { 'Content-Type': 'text/plain' }
         });

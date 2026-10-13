@@ -1,6 +1,6 @@
 {
-  "name": "Occultics Match",
-  "short_name": "Occultics",
+  "name": "Change Astrology Match",
+  "short_name": "Change Astrology",
   "description": "Know Your Numbers. Find Your Match. Pythagorean compatibility matching.",
   "start_url": "/match/dashboard.html",
   "display": "standalone",

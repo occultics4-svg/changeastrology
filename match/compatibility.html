@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Check Your Compatibility — Occultics Match</title>
+<title>Check Your Compatibility — Change Astrology Match</title>
 <meta name="description" content="Enter two birth dates. See your compatibility code instantly. 81 mathematically distinct codes. Free.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -87,7 +87,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--whit
   <div class="header">
     <a href="/match/join.html" class="logo-wrap">
       <svg class="logo-gem" viewBox="0 0 80 100" fill="none"><polygon points="40,2 78,30 40,98 2,30" fill="#1a2aff" opacity="0.12"/><polygon points="40,2 78,30 40,50" fill="#1a2aff" opacity="0.55"/><polygon points="40,2 2,30 40,50" fill="#4db8ff" opacity="0.65"/><polygon points="2,30 40,50 40,98" fill="#1a2aff" opacity="0.35"/><polygon points="78,30 40,50 40,98" fill="#2a7fff" opacity="0.45"/><polygon points="40,15 65,32 40,48" fill="#fff" opacity="0.18"/></svg>
-      <div class="logo-name">OCCULTICS</div>
+      <div class="logo-name">CHANGE ASTROLOGY</div>
     </a>
     <a href="/match/join.html" class="back-link">← Join Match</a>
   </div>
@@ -155,9 +155,9 @@ body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--whit
         <button onclick="buyReading('app_compatibility_code')" class="cta-btn cta-primary" id="btn-cca">Full Compatibility Profile — 11 Sessions — $89.99 inside the platform</button>
         <button onclick="buyReading('app_life_code_map')" class="cta-btn cta-secondary" id="btn-lcm">Your Personal Code Profile — $9.99 inside the platform</button>
         <button onclick="buyReading('app_life_code_alignment')" class="cta-btn cta-secondary" id="btn-lca">Full 7-Session Journey — $29.99 inside the platform</button>
-        <a href="/match/join.html" class="cta-btn cta-tertiary">Join Occultics Match — Find Your Code Match</a>
+        <a href="/match/join.html" class="cta-btn cta-tertiary">Join Change Astrology Match — Find Your Code Match</a>
       </div>
-      <div style="text-align:center;margin-top:12px;font-size:10px;color:rgba(255,255,255,0.2)">All profiles available inside the Occultics platform</div>
+      <div style="text-align:center;margin-top:12px;font-size:10px;color:rgba(255,255,255,0.2)">All profiles available inside the Change Astrology platform</div>
     </div>
 
     <!-- Purchase modal -->
@@ -178,8 +178,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--whit
   </div>
 
   <div class="footer">
-    <a href="/">occultics.ai</a> · <a href="/privacy.html">Privacy</a>
-    <div class="footer-copy">&copy; 2026 Occultics Media</div>
+    <a href="/">changeastrology.com</a> · <a href="/privacy.html">Privacy</a>
+    <div class="footer-copy">&copy; 2026 Change Astrology</div>
   </div>
 </div>
 
@@ -283,7 +283,7 @@ function showCalc() {
 function copyResult() {
   var code = document.getElementById('r-compat').textContent;
   var desc = document.getElementById('r-desc').textContent;
-  var text = 'Our compatibility code is ' + code + ' — ' + desc + ' | occultics.ai/match/compatibility.html';
+  var text = 'Our compatibility code is ' + code + ' — ' + desc + ' | changeastrology.com/match/compatibility.html';
   navigator.clipboard.writeText(text).then(function(){
     alert('Copied to clipboard!');
   });
@@ -293,9 +293,9 @@ function shareResult() {
   var code = document.getElementById('r-compat').textContent;
   var desc = document.getElementById('r-desc').textContent;
   var text = 'Our compatibility code is ' + code + ' — ' + desc;
-  var url = 'https://occultics.ai/match/compatibility.html';
+  var url = 'https://changeastrology.com/match/compatibility.html';
   if (navigator.share) {
-    navigator.share({title:'Occultics Compatibility Code',text:text,url:url});
+    navigator.share({title:'Change Astrology Compatibility Code',text:text,url:url});
   } else {
     copyResult();
   }
@@ -423,11 +423,11 @@ var T = {
     copy: 'Copy Code',
     share: 'Share',
     cta_title: 'Your code has been calculated.<br>Want to know what it means?',
-    cta_primary: 'Join Occultics — Unlock Your Full Profile — $29/month',
+    cta_primary: 'Join Change Astrology — Unlock Your Full Profile — $29/month',
     cta_cca: 'Full Compatibility Profile — 11 Sessions — $89.99 inside the platform',
     cta_lcm: 'Your Personal Code Profile — $9.99 inside the platform',
     cta_lca: 'Full 7-Session Journey — $29.99 inside the platform',
-    cta_note: 'All profiles available inside the Occultics platform',
+    cta_note: 'All profiles available inside the Change Astrology platform',
     recalc: 'Check another pair',
     modal_eyebrow_cca: 'Compatibility Code',
     modal_title_cca: 'Full 11-Session Compatibility Profile',
@@ -470,11 +470,11 @@ var T = {
     copy: 'Copiar Código',
     share: 'Compartir',
     cta_title: 'Tu código ha sido calculado.<br>¿Quieres saber qué significa?',
-    cta_primary: 'Únete a Occultics — Desbloquea Tu Perfil Completo — $29/mes',
+    cta_primary: 'Únete a Change Astrology — Desbloquea Tu Perfil Completo — $29/mes',
     cta_cca: 'Perfil de Compatibilidad Completo — 11 Sesiones — $89.99 dentro de la plataforma',
     cta_lcm: 'Tu Perfil de Código Personal — $9.99 dentro de la plataforma',
     cta_lca: 'Viaje Completo de 7 Sesiones — $29.99 dentro de la plataforma',
-    cta_note: 'Todos los perfiles disponibles dentro de la plataforma Occultics',
+    cta_note: 'Todos los perfiles disponibles dentro de la plataforma Change Astrology',
     recalc: 'Verificar otra pareja',
     modal_eyebrow_cca: 'Código de Compatibilidad',
     modal_title_cca: 'Perfil de Compatibilidad Completo — 11 Sesiones',
@@ -517,11 +517,11 @@ var T = {
     copy: 'コードをコピー',
     share: '共有',
     cta_title: 'あなたのコードが計算されました。<br>その意味を知りたいですか？',
-    cta_primary: 'Occulticsに参加 — フルプロフィールを解放 — $29/月',
+    cta_primary: 'Change Astrologyに参加 — フルプロフィールを解放 — $29/月',
     cta_cca: '完全な相性プロフィール — 11セッション — $89.99 プラットフォーム内',
     cta_lcm: 'パーソナルコードプロフィール — $9.99 プラットフォーム内',
     cta_lca: '7セッションの旅 — $29.99 プラットフォーム内',
-    cta_note: 'すべてのプロフィールはOcculticsプラットフォーム内で利用可能',
+    cta_note: 'すべてのプロフィールはChange Astrologyプラットフォーム内で利用可能',
     recalc: '別のペアをチェック',
     modal_eyebrow_cca: '相性コード',
     modal_title_cca: '完全な11セッション相性プロフィール',
